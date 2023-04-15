@@ -33,7 +33,7 @@ public class BoolFunction
     {
         int j = getInteger();
 
-        System.out.printf("Input = %d, output = %d.\n", j, (j>0)*j + (j<0)*(-j)); // TASK 3.3 (b)
+        System.out.println("Input = " + j + ", output = " + ((j > 0) ? j : -j) + "."); // TASK 3.3 (b) - Translate the C code to Java
 
     }
 }
