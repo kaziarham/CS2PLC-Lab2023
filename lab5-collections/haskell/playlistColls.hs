@@ -54,9 +54,9 @@ playlist2 = [piece2, advert1]
 
 playlists = [playlist1, playlist2] -- a list of lists
 
-adsFromPlaylists = "todo" -- TASK 5.4(b)
+adsFromPlaylists = [ advert | playlist <- playlists, advert <- playlist, isAdvert advert ] -- TASK 5.4(b) - two-level list comprehension that constructs a list of all advertisements that occur inside the multiple playlists in the variable playlists
 
-shortItemLenghts1 = "todo" -- TASK 5.4(a)
+shortItemLenghts1 = [ item_length_secs item | item <- playlist1, item_length_secs item < 20.0 ] -- TASK 5.4(a) - list comprehension that constructs a list of the lengths of all items that are less than 20 seconds long from the list playlist1
 
 main =
     do
