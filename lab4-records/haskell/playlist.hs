@@ -16,7 +16,7 @@ instance Show Person where
     show (Person name) = name -- how to format a Person record
 
 data Item
-    = Piece
+    = Piece -- variant 1 record constructor
         {
             item_name :: String,
             item_performer :: Person,
