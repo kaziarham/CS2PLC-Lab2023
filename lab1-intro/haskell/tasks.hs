@@ -16,8 +16,8 @@ ask prompt =
   line <- getLine
   if line == ""
     -- then ask prompt
-    then ask (prompt ++ "!") -- Task c-iii - when someone presses enter without typing anything, the repeated prompt will have an extra "!" at the 
-    -- ask (1 + prompt) -- Task c-iv - compiler error
+    then ask (prompt ++ "!") -- Task c-iii - when someone presses enter without typing anything, the repeated prompt will have an extra "!" at the end
+    -- then ask (1 + prompt) -- Task c-iv - compiler error
   else if line == "quit"
     then putStrLn ("quitting...") -- Task c ii - if quit is entered, the message "quitting" is displayed
     else putStrLn ("you said: " ++ reverse line)
